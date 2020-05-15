@@ -1,0 +1,29 @@
+<div><h2>Planet Details</h2>
+  <button (click)="list()" class="btn btn-primary">Back to Planet List</button><br>
+
+  <hr/>
+  <div *ngIf="planet">
+    <div>
+      <label><b>Planet Name: </b></label> {{planet.name_planet}}
+    </div>
+    <div>
+      <label><b>Planet type: </b></label> {{planet.planet_type}}
+    </div>
+    <div>
+      <label><b>First Name: </b></label> {{planet.distance}}
+    </div>
+    <div>
+      <label><b>Last Name: </b></label> {{planet.descr}}
+    </div>
+<!--    <div>-->
+<!--      <label><b>Email Id: </b></label> {{planet.id}}-->
+<!--    </div>-->
+    <div class="img-fluid">
+      <img src="{{planet.url_img}}" width=aut>
+    </div>
+  </div>
+
+  <br>
+  <br>
+</div>
+
