@@ -2,15 +2,11 @@
 div, h2, a{
   font-family: 'Raleway', sans-serif;
 }
-.image{
-  height:auto; background-size:cover; width:auto;
-  //background-image:url('https://solarsystem.nasa.gov/internal_resources/4212');
-  background-position:50% 50%;
-}
+
 
 body {
   opacity: 80%;
-  height:auto; background-size:cover; width:auto;
+  background-size:cover;
   background-image:url('https://solarsystem.nasa.gov/internal_resources/4212');
   background-position:50% 50%;
 }
