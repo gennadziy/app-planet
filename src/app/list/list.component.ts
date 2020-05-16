@@ -4,6 +4,7 @@ import {Planet} from '../model/planet';
 import {PlanetService} from '../service/planet.service';
 import {Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -11,14 +12,12 @@ import {Router} from '@angular/router';
 })
 export class ListComponent implements OnInit {
   p0 = [5,10,15,20,25]
-  itemsPer = 10
+  itemsPer = 12
   p: number = 1;
   searchPlanet = '';
   planets: Observable<Planet[]>;
   constructor(private planetService: PlanetService,
               private router: Router) {}
-
-
 
   ngOnInit() {
     this.reloadData();
@@ -36,7 +35,7 @@ export class ListComponent implements OnInit {
     this.itemsPer = 100
   }
   reloadData() {
-    this.planets = this.planetService.getPlanetsList();
+    this.planets = this.planetService.getPlanetsList()
   }
 
   planetDetails(id: number) {

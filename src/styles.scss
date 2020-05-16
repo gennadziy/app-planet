@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;900&display=swap');
+div, h2, a{
+  font-family: 'Raleway', sans-serif;
+}
+.image{
+  height:auto; background-size:cover; width:auto;
+  //background-image:url('https://solarsystem.nasa.gov/internal_resources/4212');
+  background-position:50% 50%;
+}
+
+body {
+  opacity: 80%;
+  height:auto; background-size:cover; width:auto;
+  background-image:url('https://solarsystem.nasa.gov/internal_resources/4212');
+  background-position:50% 50%;
+}
+ul {
+  list-style: none;
+  padding: 1px;
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  li {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      margin-right: 1rem;
+    }
+
+    small {
+      position: absolute;
+      right: 40px;
+      bottom: 5px;
+      font-size: .8rem;
+    }
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.rm {
+  $color: red;
+  border-radius: 50%;
+  background: $color;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  width: 20px;
+  height: 20px;
+  transition: .3s all;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: darken($color, 20%);
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 30px;
+
+  input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 .5rem;
+  }
+}

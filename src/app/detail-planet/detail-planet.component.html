@@ -1,29 +1,39 @@
-<div><h2>Planet Details</h2>
+<body>
+<div class="container">
+  <div class="card-panel hoverable">
+    <h4>{{planet.name_planet | uppercase}}</h4>
+  </div>
+
   <button (click)="list()" class="btn btn-primary">Back to Planet List</button><br>
 
   <hr/>
-  <div *ngIf="planet">
-    <div>
-      <label><b>Planet Name: </b></label> {{planet.name_planet}}
-    </div>
-    <div>
-      <label><b>Planet type: </b></label> {{planet.planet_type}}
-    </div>
-    <div>
-      <label><b>First Name: </b></label> {{planet.distance}}
-    </div>
-    <div>
-      <label><b>Last Name: </b></label> {{planet.descr}}
-    </div>
-<!--    <div>-->
-<!--      <label><b>Email Id: </b></label> {{planet.id}}-->
-<!--    </div>-->
-    <div class="img-fluid">
-      <img src="{{planet.url_img}}" width=aut>
-    </div>
-  </div>
+  <table *ngIf="planet" >
+    <thead>
+    <tr>
+      <th>Planet Name</th>
+      <th>Planet type</th>
+      <th>Distance</th>
+      <th>One Way Light Time</th>
+      <th>Length_of_Year</th>
+    </tr>
+    </thead>
 
-  <br>
-  <br>
+    <tbody>
+    <tr>
+      <td>{{planet.name_planet}}</td>
+      <td>{{planet.planet_type}}</td>
+      <td>{{planet.distance}}</td>
+      <td>{{planet.One_Way_Light_Time}}</td>
+      <td>{{planet.Length_of_Year}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="card-panel hoverable">
+    <img class="responsive-img" src="{{planet.url_img}}" >
+  </div>
+  {{ planet.descr}}
 </div>
 
+<!--</div>-->
+
+</body>
