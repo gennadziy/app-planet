@@ -1,10 +1,16 @@
 
-<div class="container"  >
+<div class="container" class="card-panel hoverable">
   <div class="input-field col s3" >
     <input placeholder="Search..." id="first_name2" type="text" class="validate" [(ngModel)]="searchPlanet">
     <label class="active" for="first_name2"></label>
+    <div class="container" class="card-panel hoverable">
+      <a class="btn" (click)="sort5()">5</a>
+      <a class="btn" (click)="sort10()">10</a>
+      <a class="btn" (click)="sort25()">25</a>
+      <a class="btn" (click)="sort100()">100</a>
+      <pagination-controls  (pageChange)="p = $event" ></pagination-controls>
+    </div>
     <div class="row">
-
       <div class="col s3" *ngFor="let planet of planets | async |
       paginate: { itemsPerPage: itemsPer, currentPage: p } | search: searchPlanet" > {{planet.name}}
         <div class="card" appHover>
@@ -22,10 +28,4 @@
     </div>
   </div>
 </div>
-<div class="container">
-<a class="btn" (click)="sort5()">5</a>
-<a class="btn" (click)="sort10()">10</a>
-<a class="btn" (click)="sort25()">25</a>
-<a class="btn" (click)="sort100()">100</a>
-<pagination-controls  (pageChange)="p = $event"></pagination-controls>
-</div>
+

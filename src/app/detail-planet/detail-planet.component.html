@@ -6,7 +6,7 @@
   <button (click)="list()" class="btn btn-primary">Back to Planet List</button><br>
 
   <hr/>
-  <table *ngIf="planet" >
+  <table *ngIf="planet"  class="card-panel hoverable">
     <thead>
     <tr>
       <th>Planet Name</th>
@@ -27,8 +27,8 @@
     </tr>
     </tbody>
   </table>
-  <div class="container" class="card-panel hoverable">
+  <div class="container" class="card-panel hoverable" >
     <p>{{ planet.descr }}</p>
-    <img src="{{ planet.url_img }}" >
+    <img src="{{ planet.url_img }}" minlength="300" maxlength="700" >
   </div>
 
