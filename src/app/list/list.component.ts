@@ -24,13 +24,13 @@ export class ListComponent implements OnInit {
     this.reloadData();
   }
   sort5(){
-    this.itemsPer = 5
+    this.itemsPer = 4
   }
   sort10(){
-    this.itemsPer = 10
+    this.itemsPer = 8
   }
   sort25(){
-    this.itemsPer = 25
+    this.itemsPer = 24
   }
   sort100(){
     this.itemsPer = 100

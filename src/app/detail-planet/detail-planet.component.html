@@ -19,9 +19,9 @@
 
     <tbody>
     <tr>
-      <td>{{ planet.name_planet }}</td>
-      <td>{{ planet.planet_type }}</td>
-      <td>{{ planet.distance }} km</td>
+      <td>{{ planet.name_planet | uppercase }}</td>
+      <td>{{ planet.planet_type | uppercase}}</td>
+      <td>{{ planet.distance  }} km</td>
       <td>{{ planet.one_Way_Light_Time }} mins</td>
       <td>{{ planet.length_of_Year }} earth days</td>
     </tr>
