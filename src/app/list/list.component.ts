@@ -3,6 +3,7 @@ import {Observable} from 'rxjs';
 import {Planet} from '../model/planet';
 import {PlanetService} from '../service/planet.service';
 import {Router} from '@angular/router';
+import {delay} from "rxjs/operators";
 
 
 @Component({
@@ -11,10 +12,10 @@ import {Router} from '@angular/router';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  p0 = [5,10,15,20,25]
   itemsPer = 12
   p: number = 1;
   searchPlanet = '';
+  private loading: boolean = true
   planets: Observable<Planet[]>;
   constructor(private planetService: PlanetService,
               private router: Router) {}

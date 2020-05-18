@@ -11,8 +11,8 @@
     <tr>
       <th>Planet Name</th>
       <th>Planet type</th>
-      <th>Distance</th>
-      <th>One Way Light Time</th>
+      <th>Distance from sun</th>
+      <th>One Way Light Time To the sun</th>
       <th>Length_of_Year</th>
     </tr>
     </thead>
@@ -21,9 +21,9 @@
     <tr>
       <td>{{ planet.name_planet }}</td>
       <td>{{ planet.planet_type }}</td>
-      <td>{{ planet.distance }}</td>
-      <td>{{ planet.One_Way_Light_Time }}</td>
-      <td>{{ planet.Length_of_Year }}</td>
+      <td>{{ planet.distance }} km</td>
+      <td>{{ planet.one_Way_Light_Time }} mins</td>
+      <td>{{ planet.length_of_Year }} earth days</td>
     </tr>
     </tbody>
   </table>
