@@ -4,6 +4,8 @@ import {Planet} from '../model/planet';
 import {PlanetService} from '../service/planet.service';
 import {Router} from '@angular/router';
 import {delay} from "rxjs/operators";
+import {Scheduler} from "rxjs/internal/Rx";
+import {asap} from "rxjs/internal/scheduler/asap";
 
 
 @Component({
@@ -15,7 +17,7 @@ export class ListComponent implements OnInit {
   itemsPer = 12
   p: number = 1;
   searchPlanet = '';
-  private loading: boolean = true
+  // private loading: boolean = true
   planets: Observable<Planet[]>;
   constructor(private planetService: PlanetService,
               private router: Router) {}
@@ -35,6 +37,7 @@ export class ListComponent implements OnInit {
   sort100(){
     this.itemsPer = 100
   }
+
   reloadData() {
     this.planets = this.planetService.getPlanetsList()
   }
