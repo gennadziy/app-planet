@@ -3,9 +3,6 @@ import {Observable} from 'rxjs';
 import {Planet} from '../model/planet';
 import {PlanetService} from '../service/planet.service';
 import {Router} from '@angular/router';
-import {delay} from "rxjs/operators";
-import {Scheduler} from "rxjs/internal/Rx";
-import {asap} from "rxjs/internal/scheduler/asap";
 
 
 @Component({
